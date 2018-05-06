@@ -5,7 +5,7 @@
 
 $details = Get-MailUser -identity $365MailUser `
 |Select-Object Alias,DisplayName,Identity,UserPrincipalName,ExternalEmailAddress,PrimarySmtpAddress,RecipientType, `
-AccountDisabled,IsDirSynced,HiddenFromAddressListsEnabled,WhenCreated `
+AccountDisabled,IsDirSynced,HiddenFromAddressListsEnabled,WhenCreated
 
 
 #OUTPUT
