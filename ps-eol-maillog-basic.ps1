@@ -23,7 +23,7 @@ echo "Back tracking $hours_to_track_back hour(s) from present."
 echo "... ..."
 echo "Begin Mail Delivery Log"
 echo ""
-echo "Received,SenderAddress,RecipientAddress,Subject,Status"
+echo "Status,Received,RecipientAddress,Subject"
 foreach($x in $message)
 {
 
