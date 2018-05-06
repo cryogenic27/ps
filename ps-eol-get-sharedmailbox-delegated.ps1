@@ -2,11 +2,10 @@
 Param (
     [Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true)]
     [AllowEmptyString()]
-    [string]$sharedMailbox
+    [string]$sharedMailbox_Alias
     )
 
-$result2 = @()
-$result1 = Get-MailboxPermission -Identity $shared | ft identity,user,accessrights | Out-String
+$result1 = Get-MailboxPermission -Identity $sharedMailbox_Alias | ft identity,user,accessrights | Out-String
 $result2 = $result1.Split([Environment]::NewLine)
 
 Echo "============= DELEGATED USERS ============="
